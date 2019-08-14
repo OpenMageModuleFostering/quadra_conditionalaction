@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package>
+    <name>Quadra_ConditionalAction</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Enable conditional action (link) in backoffice Grid class</summary>
+    <description>Enable conditional action (link) in backoffice Grid class with adding a condition lign like :
+array(
+    'caption' =&gt; Mage::helper('sales')-&gt;__('Print'),
+    'url'     =&gt; array('base'=&gt;'*/*/print'),
+    'field'   =&gt; 'order_id',
+    'condition'	=&gt; array('data' =&gt; 'status', 'operator' =&gt; 'eq', 'value' =&gt; 'processing'),
+)</description>
+    <notes>This extension allows backoffice developers  to add, on Grid, actions (links) that display only according to a condition.
+Example : on the orders list, you can add an "print" action that displays only on ligns with orders in "complete" status.
+
+To do that, you have to add a lign "condition" in the array, when declaring the action.
+Example :
+array(
+    'caption' =&gt; Mage::helper('sales')-&gt;__('Print'),
+    'url'     =&gt; array('base'=&gt;'*/*/print'),
+    'field'   =&gt; 'order_id',
+    'condition'	=&gt; array('data' =&gt; 'status', 'operator' =&gt; 'eq', 'value' =&gt; 'processing'),
+)
+
+The "operator" lign can have several values :
+eq (or ==) : equal
+neq (or !=) : not equal
+gt (or &gt;) : greater than
+lt (or &lt;) : lesser than
+gteq (or &gt;=) : greater than or equal
+lteq (or &lt;=) : lesser than or equal
+
+This extension also allows to display several actions (links) lign per lign instead of in a select tag.
+The "type" attribute of the column must be "multipleaction" instead of "action".</notes>
+    <authors><author><name>Quadra Team</name><user>auto-converted</user><email>magento@quadra-informatique.fr</email></author></authors>
+    <date>2009-11-12</date>
+    <time>19:24:10</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Quadra_ConditionalAction.xml" hash="0f19ae1215575f8b3cde23f0ee692ca2"/></dir></target><target name="magelocal"><dir name="Quadra"><dir name="ConditionalAction"><dir name="Block"><dir name="Adminhtml"><dir name="Widget"><dir name="Grid"><dir name="Column"><dir name="Renderer"><file name="Action.php" hash="f8aa7768d6a9c6ba7f279a6d5cea67ab"/><file name="MultipleAction.php" hash="0164403f128d7691c1630f1da06c4a05"/></dir></dir><file name="Column.php" hash="ff48ccefc8bf2ad9031d39ff17d823d3"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="37a2eb0fa87732ae7e07534c035950a6"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>
