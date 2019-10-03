@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Quadra_ConditionalAction",
+    "name": "openmage-module-fostering\/quadra_conditionalaction",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Enable conditional action (link) in backoffice Grid class",
     "authors": [
